@@ -1,25 +1,201 @@
+* {
+  font-family: "微軟正黑體";
+}
+
+
+.btn-primary {
+  background-color: #1abc9c;
+  color: white;
+  font-weight: 800;
+  transition: .3s;
+  border-color: #1abc9c;
+}
+
+.btn-primary:hover {
+  background-color: #138f76;
+  border-color: #138f76;
+}
+
+.btn-secondary {
+  background-color: #c7ecee;
+  color: #1abc9c;
+  border-color: #c7ecee;
+  font-weight: 800;
+  transition: .3s;
+}
+
+.btn-secondary:hover {
+  background-color: #9deaee;
+  border-color: #9deaee;
+  color: #1abc9c;
+}
+
 .red {
   background-color: red;
 }
+
+div.input__container {
+  background-color: #1abc9c;
+}
+
+div.input__box {
+  padding: 1.5rem 1.5rem;
+  border-radius: .5rem;
+  background-color: #edeff1;
+}
+
+div.input__box {
+  padding: 1.5rem 1.5rem;
+  border-radius: .5rem;
+  background-color: #edeff1;
+}
+
+p.error {
+  font-size: .75rem;
+  color: #fc5c65;
+  font-weight: bolder;
+}
+
+p.valid {
+  /* visibility: hidden; */
+  opacity: 0;
+}
+
+
+div.input__box .input__box__area {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: .15rem solid transparent;
+  border-radius: .25rem;
+  padding: .4rem;
+}
+
+div.input__box .input__box__area--active {
+  border: .15rem solid #1abc9c;
+  transition: .8s;
+}
+
+div.input__box .input__box__area input {
+  /* padding: .1rem .1rem; */
+  width: 90%;
+  border: none;
+  /* border-radius: .5rem; */
+}
+
+div.input__box .input__box__area input:focus {
+  outline: none !important;
+  background-color: white;
+}
+
+
+
+div.input__box .input__box__area i {
+  float: right;
+  display: inline-block;
+  color: #aaaaaa;
+  margin-right: .5rem;
+}
+
+
+
+
+div.input__box .input__box__area p {
+  margin: .25rem 0;
+  visibility: hidden;
+}
+
+div.input__box .input__box__btn {
+  width: 30%;
+  border: .25rem solid transparent;
+  border-radius: .25rem;
+  background-color: #1abc9c;
+  color: white;
+  padding: .25rem;
+  margin: 0 auto;
+  display: block;
+  cursor: pointer;
+  transition: .5s;
+}
+
+div.input__box .input__box__btn:hover {
+  opacity: 0.6;
+}
+
 
 .table__wrapper {
   overflow-x: auto;
 }
 
+
+
 table {
   /* table-layout: fixed; */
+}
+
+table thead {
+  background-color: #1abc9c;
+  /* opacity: 0.6; */
+  color: white;
 }
 
 table thead .thead__id {
   width: 50px;
 }
 
+
 table thead .thead__action {
   width: 100px;
 }
 
+table tbody {
+  background-color: #edeff1;
+}
+
+table tbody tr {
+  border-bottom: .1rem solid #aaaaaa;
+}
+
+.modal-body input {
+  border: .15rem solid transparent;
+  border-radius: .2rem;
+  padding: .25rem;
+  display: block;
+  /* font-family: "Font Awesome 5 Free"; */
+}
+
+.modal-body {
+  background-color: #edeff1;
+}
+
+.modal-body input:focus {
+  outline: none !important;
+}
+
+.modal-body input.modify__input--active {
+  border: .15rem solid #1abc9c;
+
+}
+
+.close:focus {
+  outline: none !important;
+}
 
 @media screen and (max-width: 600px) {
+  .input__box .logo__box {
+    display: none;
+  }
+
+  .input__box .input__box__area {
+    width: 100%;
+    padding: .5rem .5rem !important;
+  }
+
+  .input__box .input__box__area input {
+    /* width: 100% !important; */
+  }
+
   .table thead th {
     padding: .2rem;
   }

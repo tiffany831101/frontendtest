@@ -52,13 +52,18 @@ export default class Tableitem extends Component {
         return (
             <tbody>
                 {this.props.tableItem.length !== 0 && this.props.tableItem.map((item, key) => (
-                    < tr class="" >
+                    <tr key={key}>
                         <th scope="row">{item.id}</th>
                         <td>{item.name}</td>
                         <td>{item.phone}</td>
                         <td>{item.email}</td>
                         <td>
-                            <i data-id={item.id} className="fas fa-pen" onClick={this.sendID}></i>
+                            <i data-id={item.id} className="fas fa-pen"
+                                onClick={(e) => {
+                                    this.sendID(e)
+                                    this.props.handleShow()
+                                }}>
+                            </i>
                             <i data-id={item.id} onClick={this.deleteItem} className="far fa-trash-alt"></i>
                         </td>
                     </tr>
